@@ -1,0 +1,94 @@
+TASK 1 — Home Page Validation
+
+Element : Logo Image
+Locator : By.cssSelector("#logo img")
+Reason : Uses ID-based parent with child image → fast and reliable.
+
+Element : Navigation links
+Locator : By.cssSelector("nav li a")
+Reason : Hierarchical selector targets all navigation links inside nav.
+
+TASK 2 — About Us
+
+Element : About Us link
+Locator : By.linkText("About Us")
+Reason : Exact visible text ensures clarity and stability.
+
+Element : Page heading
+Locator : By.cssSelector("div[id='page-content'] h1")
+Reason : Scoped under page-content → avoids ambiguity.
+
+Element : Page content
+Locator : By.cssSelector("div[class='wysiwyg']")
+Reason : Class uniquely identifies rich text content section.
+
+TASK 3 — Catalog Page
+
+Element : Catalog link
+Locator : By.linkText("Catalog")
+Reason : Clear navigation text → stable locator.
+
+Element : Page heading
+Locator : By.cssSelector("div#page-content h1")
+Reason : ID-based scoping improves accuracy.
+
+Element : Product names
+Locator : By.cssSelector("section.product-grid a h3")
+Reason : Targets product titles within structured grid layout.
+
+Element : Product grid container
+Locator : By.className("product-grid")
+Reason : Class directly identifies main product container.
+
+Element : Sold Out products
+Locator : By.xpath("//a[.//div[contains(@class,'sold-out')]]")
+Reason : XPath required to detect nested “sold-out” indicator.
+
+Element : Sold Out product names
+Locator : By.xpath("//a[.//div[contains(@class,'sold-out')]]//h3")
+Reason : Extends XPath to fetch only names of sold-out items.
+
+Element : Grey product link
+Locator : By.partialLinkText("Grey")
+Reason : Partial match allows flexibility in product naming.
+
+TASK 4 — Product Detail Page
+
+Element : Grey Jacket product link
+Locator : By.cssSelector("a[href*='grey-jacket']")
+Reason : Partial href ensures targeting specific product reliably.
+
+Element : Product price
+Locator : By.cssSelector("h2 span[class='product-price']")
+Reason : Combines tag and class for precise targeting.
+
+Element : Breadcrumb links
+Locator : By.cssSelector("div[id='breadcrumb'] span a")
+Reason : Scoped within breadcrumb container for accuracy.
+
+Element : Add to Cart button
+Locator : By.xpath("//input[@id='add']")
+Reason : ID-based XPath ensures uniqueness and reliability.
+
+
+TASK 6 — Header & Cart
+
+Element : Cart link
+Locator : By.partialLinkText("My Cart")
+Reason : Handles dynamic text like item count.
+
+Element : Checkout link
+Locator : By.xpath("//a[@class='checkout']")
+Reason : Class uniquely identifies checkout action.
+
+Element : Cart drawer toggle
+Locator : By.xpath("//a[@class='toggle-drawer cart desktop ']")
+Reason : Exact class match ensures correct element selection.
+
+Element : Empty cart message
+Locator : By.xpath("//p[@class='empty']")
+Reason : Class-specific locator for empty state validation.
+
+Element : Login link
+Locator : By.linkText("Log In")
+Reason : Exact visible text → clean and stable locator.
